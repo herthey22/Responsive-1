@@ -1,0 +1,191 @@
+
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: lightgreen;
+}
+.border-box{
+    background-color: grey;
+    width:300px;
+    height: 50px;
+    padding: 25px;
+    margin: 20px;
+    border: 10px solid rgb(154, 241, 49);
+    /* box-sizing: border-box; */
+}
+
+.content-box{
+    background-color: grey;
+    width:300px;
+    height: 50px;
+    padding: 25px;
+    margin: 20px;
+    border: 10px solid rgb(241, 87, 49);
+    /* box-sizing: content-box; */
+}
+/* css outline */
+div.outline{
+    border: 10px solid black;
+    outline: 10px solid orange;
+    
+}
+
+/* css text-align */
+div.a{
+    text-align: center;
+}
+
+div.b{
+    text-align: left;
+}
+div.c{
+    text-align: right;
+}
+div.d{
+    text-align: justify;
+}
+
+/* text decoration */
+div.text-decoration{
+    text-decoration: underline wavy red 20%;
+}
+
+/* css 2d transform property */
+div.twod{
+    width: 60px;
+    height: 50px;
+    background-color: red;
+    border: 2px solid black;
+    margin-left: 60px;
+}
+
+div.translate{
+    transform: translate(60px, 20px);
+}
+
+div.rotate{
+    transform: rotate(30deg);
+}
+
+div.scale{
+    transform: scale(2, 0.5);
+}
+
+div.skew{
+    transform: skew(10deg, 20deg);
+}
+
+div.matrix{
+    transform: matrix(1.5, 0.5, 0.5, 1, 50, 10);
+}
+
+/* flex direction */
+div.container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    border: 2px solid black;
+    background-color: purple;
+}
+
+div.box{
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    border: 2px solid red;
+    background-color: orange;
+
+}
+
+.colf{
+    margin-top: 20px;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100px;
+    text-align: center;
+}
+.column1{
+    width: 20%;
+    background-color: orange;
+}
+.column2{
+    width: 60%;
+    background-color: greenyellow;
+}
+.column3{
+    width: 20%;
+    background-color: magenta;
+}
+
+header, footer{
+    background-color: palevioletred;
+    text-align: center;
+}
+
+@media screen and (max-width:768px) {
+    .column1,.column2{
+        width: 50%;
+    }
+    .column3{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .column1, .column2, .column3{
+        width: 100%;
+    }
+}
+/* image gallery */
+div.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    margin-top: 20px;
+}
+
+img{
+    width: 33%;
+    height: 180px;
+    margin: 1px;
+    
+    
+}
+
+@media screen and (max-width:768px) {
+    img{
+        width: 49%;
+        height: 180px;
+        margin: 1px;
+    }
+}
+@media print and (max-height:768px) {
+    img{
+        width: 100%;
+        height: 180px;
+    }
+}
+
+@media screen and (max-width:330px) {
+    img{
+        width: 100%;
+    }
+}
+/* grid container */
+div.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 80px 150px 250px;
+    background-color: orange;
+    padding: 10px;
+    gap: 10px;
+}
+
+.grid-container > div{
+    background-color: rgb(120, 120, 188);
+    
+}
